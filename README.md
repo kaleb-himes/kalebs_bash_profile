@@ -1,6 +1,4 @@
 clone these files into a directory with:
-
-Example:
 ```
 git clone https://github.com/kaleb-himes/kalebs_bash_profile.git example_directory
 ```
