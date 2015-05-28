@@ -1,0 +1,91 @@
+## Kalebs .bash_profile
+ #
+ # Copyright (C) 2014 wolfSSL
+ #
+ # This file was created and dreamed up by Kaleb while working for
+ # wolfSSL as a summer intern in 2014.
+ #
+ # Kalebs .bash_profile is free software; you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation; either version 2 of the License, or
+ # (at your option) any later version.
+ #
+ # Kalebs .bash_profile is distributed in the hope that it will be useful/fun,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ # GNU General Public License for more details.
+ #
+ # You should have received a copy of the GNU General Public License
+ # along with this program; if not, write to the Free Software
+ # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
+ ##
+
+#changes ls listing to alphabetical left align single column
+alias ls='ls -la'
+#helpful methods:
+#move up one directory
+alias up="cd ../"
+#move up two directories
+alias up2="cd ../../"
+#----------------------------------------------------------------
+#set default compiler to clang
+export CC=clang
+export HAVE_FIPS_SOURCES=1
+#----------------------------------------------------------------
+#PATHS
+#path to scan-build
+export PATH="${PATH}:/Users/khimes/work/checker-276"
+#mysql bin
+export PATH="${PATH}:/usr/local/mysql/bin"
+export PATH="${PATH}:/usr/local/mysql/support-files"
+export PATH="${PATH}:/usr/local/Cellar/wireshark/1.12.4"
+export PATH="${PATH}:/Users/khimes/School_Spring_2015/ROBOTVISION_442/naoqi_python/pynaoqi-python-2.7-naoqi-1.14-mac64"
+#----------------------------------------------------------------
+#have make use all the cores possible
+alias make='make -j 8'
+#----------------------------------------------------------------
+#easy navigation to wolfssl-examples
+alias wolf="cd /home/khimes/work/wolfssl-examples"
+#easy navigation to work directory from anywhere
+alias work="cd /home/khimes/work/"
+#reset terminal as if just starting up
+alias reset="source ~/.bash_profile"
+
+#set color coding by program type / directory etc.
+#----------------------------------------------------------------
+export CLICOLOR=1
+export LSCOLORS=gxFxCxDxBxegedadagacad
+export JUNIT_HOME=/usr/share/java
+#----------------------------------------------------------------
+#welcome Message:
+
+ore="\033[31m"
+obe="\033[1;34m"
+oge="\033[32m"
+ce="\033[0m"
+
+rm .bash_history
+clear
+echo -e "           Kaleb's Mac Terminal"
+echo -e "${obe}                _      ____  ___   ___   _${ce}"     
+echo -e "${obe} __    __ ___  | |    / ___|/ __| / __| | |${ce}"    
+echo -e "${obe} \ \/\/ // _ \ | |__  |  _| \__ \ \__ \ | |__${ce}"  
+echo -e "${obe}  \_/\_/ \___/ |____| |_|   |___/ |___/ |____|${ce}"
+echo""
+echo -ne "   Today is : "; date
+echo -e ""
+# disk_available=$(df -h -block-size=1024 | awk '{sum += $4;} END {print sum;}');
+# disk_used=$(df -h -block-size=1024 | awk '{sum += $3;} END {print sum;}');
+# disk_size=$(df -h -block-size=1024 | awk '{sum += $2;} END {print sum;}');
+# disk_available_mb=$(echo "scale=2; (($disk_available/(1024^2))/1.873)" | bc)
+# disk_used_mb=$(echo "scale=2;(($disk_used/(1024^2))/1.873)" | bc)
+# disk_size_mb=$(echo "scale=2; (($disk_size/(1024^2))/1.873)" | bc)
+
+
+# echo -e "${obe}       +-----------------------------+"
+# echo -e "       |${ce} ${oge}Total Disk Space:${ce} ${ore}${disk_size_mb} GB${ce}${obe} |"${ce}
+# echo -e "${obe}       |${ce} ${oge}Total Free Space:${ce} ${ore}${disk_available_mb} GB ${ce}${obe}|"${ce}
+# echo -e "${obe}       |${ce} ${oge}Total Used Space:${ce}  ${ore}${disk_used_mb} GB ${ce}${obe}|"${ce}
+# echo -e "${obe}       +-----------------------------+"${ce}
+# echo -e "";
+
