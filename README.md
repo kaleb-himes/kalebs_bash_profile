@@ -11,7 +11,8 @@ remote: Total 15 (delta 0), reused 0 (delta 0), pack-reused 13
 Unpacking objects: 100% (15/15), done.
 Checking connectivity... done.
 ```
-the use copy/paste to move them to your home direcory
+*** skip to NOTE if you're on a mac
+then use copy/paste to move them to your home direcory
 ```
 cp .bash* ~/
 ```
@@ -20,3 +21,10 @@ and now source the bashrc to update
 source .bashrc
 ```
 Now edit .bash_profile as you see fit and type "reset" to re-source the bashrc whenever you want.
+
+*** NOTE: if you're on a mac os x you will just need the .bash_profile.mac no bashrc
+```
+mv .bash_profile.mac ~/.bash_profile
+cd
+source .bash_profile
+```
